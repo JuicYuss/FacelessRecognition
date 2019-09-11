@@ -3,7 +3,7 @@
 """
 Created on Tue Sep  3 14:19:33 2019
 
-@author: yussiroz
+@author: yussiroz, InbalWeiss
 """
 from tensorflow.keras.callbacks import ModelCheckpoint
 import data
