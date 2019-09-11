@@ -6,4 +6,10 @@ Given a set of ++ 24 k samples, we achieved:
 
 
 ![img1](https://github.com/yussiroz/FacelessRecognition/blob/master/samples/example_1.jpg)
+
 ![img2](https://github.com/yussiroz/FacelessRecognition/blob/master/samples/example_2.jpg)
+
+
+
+prerequisites: 
+python = 3.5.6, tensorflow = 1.10.0, tensorflow-gpu = 2.0.0rc0
