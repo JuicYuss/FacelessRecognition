@@ -4,7 +4,6 @@ from tensorflow.keras.layers import Dense, Dropout, GlobalAveragePooling2D, Conv
 
 def CNN(shape1, shape2, shape3, nbClasses):
     input_shape = (shape1, shape2, shape3)
-#    optimizer = Adam(0.005, beta_1=0.1, beta_2=0.001, amsgrad=True)
     n_classes = nbClasses
     model = Sequential()
     model.add(Conv2D(filters=16, kernel_size=2, input_shape=input_shape, activation='relu'))
