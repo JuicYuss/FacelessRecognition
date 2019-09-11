@@ -3,11 +3,11 @@
 """
 Created on Tue Sep  3 14:19:33 2019
 
-@author: yussiroz
+@author: yussiroz & InbalWeiss
 """
 from tensorflow.keras.callbacks import ModelCheckpoint
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import  Dense, Dropout, GlobalAveragePooling2D, Conv2D, concatenate, GlobalMaxPooling2D,
+from tensorflow.keras.layers import Dense, Dropout, GlobalAveragePooling2D, Conv2D, MaxPooling2D
 import data
 from data import Images
 import matplotlib.pyplot as plt
@@ -15,12 +15,8 @@ from scipy.stats import mode
 """Upload super res GAN libs"""
 from model.srgan import generator
 from utils import tensor2numpy, shuffle, devide, create_onehot, per_label, devide_submission
-from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2
-from tensorflow.keras.applications.nasnet import NASNetMobile
-import os
 import numpy as np
 from sklearn.preprocessing import OneHotEncoder
-from sklearn.model_selection import train_test_split
 
 """Upload images, poses, signatures"""
 poses = data.read_pose('./data/pose.pkl')
