@@ -9,6 +9,7 @@ def load_image(path):
     return np.array(Image.open(path))
 
 def per_label(y, top_five):
+#top five predictions (top five labels per sample)
    l = []
    pred=[]
    for col in range(y.shape[1]):
@@ -21,6 +22,7 @@ def per_label(y, top_five):
 
 
 def devide_submission(frs):
+#take n frames for each video randomly   
     directories = [d for d in os.listdir('./data/') if d[:2]=='se']
     frames = []
     for d in directories:
@@ -56,6 +58,7 @@ def shuffle(x, i):
     return x[:i]
 
 def devide(frs, sequences, videos):
+#take randomly n frames, sequences and videos for each celebrity     
     directories = [d for d in os.listdir('./data/') if d[:2]=='pe']
     frames = []
     for d in directories:
