@@ -4,6 +4,7 @@ from common import resolve_single
 from PIL import Image
 import os
 from tqdm import tqdm
+from scipy.stats import mode
 
 def load_image(path):
     return np.array(Image.open(path))
