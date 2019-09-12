@@ -9,5 +9,5 @@ Given a set of 500 k+ samples, we achieved:
 
 
 
-prerequisites: 
+# Prerequisites: 
 python = 3.5.6, tensorflow = 1.10.0, tensorflow-gpu = 2.0.0rc0
