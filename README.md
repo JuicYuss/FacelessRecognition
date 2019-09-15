@@ -25,7 +25,7 @@ into 224 * 224 pixel image.
 We trained a CNN on the super resolution images.
 
 <img src="https://github.com/yussiroz/FacelessRecognition/blob/master/samples/model.png" width = 400 hight = 800>
-![img3](https://github.com/yussiroz/FacelessRecognition/blob/master/samples/model.png)
+
 
 
 ## Prerequisites 
