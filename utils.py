@@ -4,12 +4,14 @@ from PIL import Image
 import os
 from tqdm import tqdm
 from scipy.stats import mode
+from tensorflow.keras.callbacks import ModelCheckpoint
+import matplotlib.pyplot as plt
+import cv2
 
 def load_image(path):
     return np.array(Image.open(path))
 
 def per_label(y, top_five):
-#top five predictions (top five labels per sample)
    l = []
    pred=[]
    for col in range(y.shape[1]):
@@ -20,9 +22,31 @@ def per_label(y, top_five):
    return pred,l
 
 
+def train_model(iterations, name, model, srgan, resize = False):
+    filepath="weights/custom/" + name + ".h5"
+    checkpoint = ModelCheckpoint(filepath, monitor='accuracy', verbose=1, save_best_only=True, mode='max')
+    callbacks_list = [checkpoint]
+    for i in range(iterations):
+        train_set = devide(24, 2, 2)
+        X = tensor2numpy('./data/', train_set, srgan)
+        if(resize):
+            for k, v in X.items():
+                X[k] = cv2.resize(v, (224,224))
+        x = [X[i] for i in X.keys()]
+        train = np.array(x, dtype = "float64")
+        y = create_onehot(X)
+        history = model.fit(train, y, batch_size=32, epochs=7, callbacks=callbacks_list, validation_split=0.2)
+        # Plot training & validation accuracy values
+        plt.plot(history.history['loss'])
+        plt.plot(history.history['val_loss'])
+        plt.title('Model loss')
+        plt.ylabel('Loss')
+        plt.xlabel('Epoch')
+        plt.legend(['Train', 'Test'], loc='upper left')
+        plt.show()
+
 
 def devide_submission(frs):
-#take n frames for each video randomly   
     directories = [d for d in os.listdir('./data/') if d[:2]=='se']
     frames = []
     for d in directories:
@@ -58,7 +82,6 @@ def shuffle(x, i):
     return x[:i]
 
 def devide(frs, sequences, videos):
-#take randomly n frames, sequences and videos for each celebrity     
     directories = [d for d in os.listdir('./data/') if d[:2]=='pe']
     frames = []
     for d in directories:
