@@ -1,7 +1,7 @@
 # Faceless Recognition
 Challenge from DataHack2019 on person recognition in low resolution images.
 
-Disclamer : This is not the last version of the projcect.
+Disclamer : This is not the last version of the project.
 
 ### Data
 
