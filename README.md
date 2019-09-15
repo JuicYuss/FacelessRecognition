@@ -18,6 +18,7 @@ We managed to achieve accuracy of ~90% on the test data, which is composed of 24
 ### 1. SRGAN
 We used SRGAN (super resolution GAN) to increase the resolution of the images. It enhances the original image of 64 * 64 pixels
 into 224 * 224 pixel image.
+reference to the source : https://github.com/krasserm/super-resolution
 
 ![img1](https://github.com/yussiroz/FacelessRecognition/blob/master/samples/example_1.jpg)![img2](https://github.com/yussiroz/FacelessRecognition/blob/master/samples/example_2.jpg)
 
