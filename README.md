@@ -26,7 +26,7 @@ We trained a CNN on the super resolution images.
 
 <img src="https://github.com/yussiroz/FacelessRecognition/blob/master/samples/model.png" width = 400 hight = 800>
 
-
+model weights: https://drive.google.com/file/d/1npsTYjmgLw78aTGnxlU8h5wHuxtL2du4/view?usp=sharing
 
 ## Prerequisites 
 python = 3.5.6, tensorflow = 1.10.0, tensorflow-gpu = 2.0.0rc0
