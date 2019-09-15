@@ -3,7 +3,7 @@ Challenge from DataHack2019 on person recognition in low resolution images.
 
 **This is not the last version of the project.
 
-### Data
+### Data & results
 
 The data set includes 500k+ samples.
 A sample is presented as follows: 
