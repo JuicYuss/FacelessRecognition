@@ -24,6 +24,7 @@ into 224 * 224 pixel image.
 ### 2. CNN
 We trained a CNN on the super resolution images.
 
+![img3](https://github.com/yussiroz/FacelessRecognition/blob/master/samples/model.png)
 
 
 ## Prerequisites 
