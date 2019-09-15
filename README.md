@@ -1,7 +1,18 @@
 # Faceless Recognition
 Challenge from DataHack2019 on person recognition in low resolution images.
 
-The data set included 500k+ samples.
+### Data
+
+The data set includes 500k+ samples.
+A sample is presented as follows: 
+FacelessRecognition/data/person_0000/video_0000/seq_0000/frame_0000
+
+Each frame is of resolution 64 * 64. 
+The label of a frame is the "person####" folder name.
+
+Our training/test method is to devide the data randomly and evenly between the persons we want to classify => implementing SRGAN for adding new features => training our CNN model on it. 
+
+We managed to achieve accuracy of ~90% on the test data, which is composed of 24 frames per 2 random sequences per 2 random videos of a person. 
 
 ## Training Process
 ### 1. SRGAN
