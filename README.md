@@ -1,5 +1,5 @@
 # Faceless Recognition
-Challenge from DataHack2019 on person recognition in low resolution images. https://www.datahack.org.il/challenge/orcam-faceless-recognition
+Challenge from DataHack2019 on person recognition in low resolution images: https://www.datahack.org.il/challenge/orcam-faceless-recognition
 
 **This is not the last version of the project.
 
