@@ -14,7 +14,7 @@ The label of a frame is the "person####" folder name.
 
 Our training/test method is to devide the data randomly and evenly between the persons we want to classify => implementing SRGAN for adding new features => training our CNN model on it. 
 
-We managed to achieve accuracy of ~90% on the test data, which is composed of 24 frames per 2 random sequences per 2 random videos of a person. 
+We managed to achieve accuracy of ~80% and more, and Loss ~0.15 and less on the test data, which is composed of 24 frames per 2 random sequences per 2 random videos of a person. 
 
 ## Training Process
 ### 1. SRGAN
