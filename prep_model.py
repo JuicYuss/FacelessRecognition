@@ -1,7 +1,7 @@
 """
 Created on Tue Sep  3 14:19:33 2019
 
-@author: YussiRoz, InbalWeiss
+@author: YossiEik, InbalWeiss
 
 """
 from tensorflow.keras.callbacks import ModelCheckpoint
